@@ -17,11 +17,13 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\OneDrive\Escritorio\examen_final\examen_final\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,14 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="..\..\..\..\OneDrive\Escritorio\Form1.cs">
       <SubType>Form</SubType>
+      <Link>Form1.cs</Link>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="..\..\..\..\OneDrive\Escritorio\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Form1.Designer.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\..\..\..\OneDrive\Escritorio\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Form1.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\negocios\negocios.csproj">
+      <Project>{4aef3e60-4421-4c23-8e02-187ee6a6b580}</Project>
+      <Name>negocios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
